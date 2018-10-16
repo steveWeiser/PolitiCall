@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import ExampleButton from './components/ButtonExample';
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
           >
             Learn React
           </a>
+          <ExampleButton></ExampleButton>
         </header>
       </div>
     );
