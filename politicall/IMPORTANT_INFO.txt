@@ -1,12 +1,13 @@
 We will create components inside the component folder (src/components).
 we will create containers inside the containers folder (src/containers)
-
 components will be objects, such as buttons.
 containers will hold these component objects.
-
 everything will be called by App.js to render these components/containers.
-
 There is an example of how to create a button inside the ButtonExample.js file inside components folder.
+
+After cloning the project with git (shown below "Using git") all you have to do is type "npm start" and
+the program will launch the app on google chrome. To update it, just save the file on your computer, and it
+will re-launch with changes automatically.
 
 BRANCHES INFORMATION:
 
