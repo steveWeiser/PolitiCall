@@ -1,0 +1,3 @@
+rootProject.name = 'PolitiCall'
+
+include ':app'
