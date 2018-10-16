@@ -1,0 +1,45 @@
+We will create components inside the component folder (src/components).
+we will create containers inside the containers folder (src/containers)
+
+components will be objects, such as buttons.
+containers will hold these component objects.
+
+everything will be called by App.js to render these components/containers.
+
+There is an example of how to create a button inside the ButtonExample.js file inside components folder.
+
+BRANCHES INFORMATION:
+
+We will not be pushing changes to the WebMaster branch.
+We will have a WebDev branch, and underneath that we will have WebDev<Name> branches for you all to push your changes to.
+This is so we do not accidentally delete each others code, or modify anything accidentally.
+
+Using git:
+
+(this is all inside the directory you want to be coding in, in your respective terminal)
+
+to clone everything type: "git clone <url>"  with <url> being the url to the github git repository.
+after that, type: "git checkout -b WebDev<YourName>" to create a new branch with your name for Web development.
+    you will be pushing your changes here. We will merge branches later.
+then type "git push --set-upstream origin WebDevMaster" to keep track of what changes happen there.
+
+your repository should be set up now.
+
+if you want to pull the most recent changes from github, type: "git pull". 
+    If that doesn't work, you will most likely have to specify the WebDevMaster branch to pull from.
+
+if you want to push your changes, type: "git add *" to add all changes to staging area.
+    If you only want to add a certain file or folder, type "git add <file/folder name>"
+    If you want to add your current directory, type "git add ."
+then type "git commit -m "<your message here>" with your message describing what you are adding with this update.
+then type "git push" and it will push to your WebDev<name> branch. 
+
+Thats it. Good Luck!
+
+
+P.S.
+
+typing "git status" will reveal a lot of useful information, like what files are new, what files were
+modified, what files are in staging area to be pushed, and if branch is up to date.
+
+typing "git branch" will should you what branch you are currently on, and other branches as well.
