@@ -16,4 +16,26 @@ const RepDetail = (props) => {
     );
 };
 
+const styles ={
+    repImageStyle:
+    {
+
+    },
+    imageContainerStyle:
+    {
+        justifyContent: 'center', 
+        alignItems: 'center', 
+        marginLeft: 10, 
+        marginRight: 10
+    },
+    repInfoStyle:
+    {
+        flexDirection: 'column', 
+        justifyContent: 'space-around'
+    },
+    repNameStyle:
+    {
+        fontSize: 18
+    }
+};
 export default RepDetail;
