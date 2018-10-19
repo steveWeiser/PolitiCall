@@ -9,6 +9,7 @@ const RepDetail = (props) => {
             <CardSection>
                 <View>
                     <Text>{props.repName}</Text>
+                    <Text>{props.repParty}</Text>
                 </View>
             </CardSection>
         </Card>

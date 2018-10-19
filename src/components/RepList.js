@@ -7,9 +7,9 @@ import RepDetail from './RepDetail';
 const RepList = () => {
     return (
         <ScrollView>
-            <RepDetail repName={'Barney Williams'} />
-            <RepDetail repName={'Indian Jones'} />
-            <RepDetail repName={'Stephen Colbert'} />
+            <RepDetail repName={'Barney Williams'} repParty={'Homies'}/>
+            <RepDetail repName={'Indian Jones'} repParty={'Homies'}/>
+            <RepDetail repName={'Stephen Colbert'} repParty={'Homies'}/>
 
         </ScrollView>
     );
