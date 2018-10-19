@@ -1,11 +1,14 @@
 import React from 'react';
 import { Text, View } from'react-native';
+import Card from './Card';
 
 const RepDetail = (props) => {
     return (
-        <View>
-            <Text>{props.repName}</Text>
-        </View>
+        <Card>
+            <View>
+                <Text>{props.repName}</Text>
+            </View>
+        </Card>
     );
 };
 
