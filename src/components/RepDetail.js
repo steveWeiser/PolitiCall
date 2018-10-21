@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, View, Image } from'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
+import Button from './Button';
 
 const RepDetail = (props) => {
 
@@ -26,6 +27,12 @@ const RepDetail = (props) => {
                     <Text style={styles.repNameStyle}>{repName}</Text>
                     <Text>{repParty}</Text>
                 </View>
+
+                <CardSection>
+                    <Button>
+                        Call
+                    </Button>
+                </CardSection>
             </CardSection>
         </Card>
     );
