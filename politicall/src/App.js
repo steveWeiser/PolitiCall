@@ -1,29 +1,54 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import ExampleButton from './components/ButtonExample';
+import ZipCodeScreen from './containers/ZipCodeContainer'
+//import MainScreen from './containers/MainScreen'
+import PoliticiansContainer from './containers/PoliticiansContainer'
+
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      //Info for displaying 
+      ShowZipCodeScreen: true,
+      zipcode: '',
+      ShowMainScreen: false
+    }
+  }
+
+  changeFromZipToMainScreen = (zipCodeNum) => {
+    this.setState({ShowZipCodeScreen: false, ShowMainScreen: true, zipcode: zipCodeNum});
+  }
+
+
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Hello World
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          <ExampleButton></ExampleButton>
-        </header>
-      </div>
-    );
+
+    //show zip code screen.
+    if (this.state.ShowZipCodeScreen === true) {
+      return (
+        <div>
+          <ZipCodeScreen changeScreen={this.changeFromZipToMainScreen}></ZipCodeScreen>
+        </div>
+      )
+    }
+
+    if (this.state.ShowMainScreen === true) {
+      return (
+        <div>
+          {/*<MainScreen></MainScreen>*/}
+          <PoliticiansContainer></PoliticiansContainer>
+        </div>
+      )
+    }
+
+    //none of the pages that were supposed to load, loaded correctly.
+    else {
+      return (
+        <div>
+          <text>Error Loading pages</text>
+        </div>
+      );
+    }
   }
 }
 
