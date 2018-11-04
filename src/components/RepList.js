@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { ScrollView } from 'react-native';
 import RepDetail from './RepDetail';
 import axios from 'axios';
