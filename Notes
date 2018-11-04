@@ -1,2 +1,3 @@
 npm install --save react-navigation
 npm install react-native-vector-icons --save
+npm install --save axios
