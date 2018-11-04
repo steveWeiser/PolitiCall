@@ -15,13 +15,13 @@ const RepDetail = ({ record }) => {
         <Card>
             <CardSection>
                 {/* right now we dont have an image to work with, so leave commented */}
-                {/* Image of your Rep
+                {/* Image of your Rep */}
                 <View style={styles.imageContainerStyle}>
                     <Image
                         syle={styles.repImageStyle}
-                        source={{uri: repImage}}
+                        source={{uri: 'https://theunitedstates.io/images/congress/225x275/' + id + '.jpg'}}
                     />
-                </View> */}
+                </View>
 
                 {/* Name of Rep & party */}
                 <View style={styles.repInfoStyle}>
