@@ -3,16 +3,18 @@ import './App.css';
 import ZipCodeScreen from './containers/ZipCodeContainer'
 //import MainScreen from './containers/MainScreen'
 import PoliticiansContainer from './containers/PoliticiansContainer'
-
+import NavBar from '../src/components/NavBar'
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       //Info for displaying 
-      ShowZipCodeScreen: true,
+      ShowZipCodeScreen: false,
+      ShowMainScreen: false,
       zipcode: '',
-      ShowMainScreen: false
+      NavBarTestScreen: true
+      
     }
   }
 
@@ -37,6 +39,14 @@ class App extends Component {
         <div>
           {/*<MainScreen></MainScreen>*/}
           <PoliticiansContainer></PoliticiansContainer>
+        </div>
+      )
+    }
+
+    if (this.state.NavBarTestScreen === true) {
+      return (
+        <div>
+          <NavBar></NavBar>
         </div>
       )
     }

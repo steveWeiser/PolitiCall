@@ -124,3 +124,11 @@ you use .className with class name component used.*/
   height: 100%;
   width: 100%;
 }
+
+.Menu {
+  flex: 1;
+}
+
+Menu:active {
+  transform: rotate(45deg);
+}
