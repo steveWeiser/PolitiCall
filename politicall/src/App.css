@@ -61,7 +61,7 @@ you use .className with class name component used.*/
   height: 70%;
   margin-top: 6%;
   border-radius: 4%;
-  background-color: rgba(185, 196, 199, 0.935);
+  background-color: rgba(173, 183, 185, 0.935);
   align-items: center;
 }
 
@@ -103,14 +103,16 @@ you use .className with class name component used.*/
 }
 
 .PoliticianCardContainer {
-  width: 50%;
+  width: 75%;
   height: 100%;
   background-color: grey;
 }
 
 .PoliticianCard {
+  display: flex;
+  flex-direction: row;
   width: 100%;
-  height: 5%;
+  height: 4%;
   background-color: lightblue;
   border-width: 0px;
   border-bottom-width: 55px;
