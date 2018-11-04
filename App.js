@@ -1,14 +1,15 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 import { createBottomTabNavigator } from 'react-navigation';
+import Login from './Login';
+
+
 
 class HomeScreen extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>One</Text>
-      </View>
-    );
+            <Login />
+           );
   }
 }
 
