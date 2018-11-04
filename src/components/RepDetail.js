@@ -4,28 +4,29 @@ import Card from './Card';
 import CardSection from './CardSection';
 import Button from './Button';
 
-const RepDetail = (props) => {
+const RepDetail = ({ record }) => {
 
     // we destructure here becuase we had props.record.(something) over 
     // and over so we make it nice and clean 
-    const { repName, repParty, repImage } = props;
+    // const { repName, repParty, repImage } = props;
 
 
     return (
         <Card>
             <CardSection>
-                {/* Image of your Rep */}
+                {/* right now we dont have an image to work with, so leave commented */}
+                {/* Image of your Rep
                 <View style={styles.imageContainerStyle}>
                     <Image
                         syle={styles.repImageStyle}
                         source={{uri: repImage}}
                     />
-                </View>
+                </View> */}
 
                 {/* Name of Rep & party */}
                 <View style={styles.repInfoStyle}>
-                    <Text style={styles.repNameStyle}>{repName}</Text>
-                    <Text>{repParty}</Text>
+                    <Text style={styles.repNameStyle}>{record.name}</Text>
+                    <Text>{repcord.party}</Text>
                 </View>
 
                 <CardSection>
