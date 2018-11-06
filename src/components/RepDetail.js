@@ -9,7 +9,7 @@ const RepDetail = ({ record }) => {
     // and over so we make it nice and clean 
     // const { repName, repParty, repImage } = props;
     const id = record.id;
-
+    const photo = 'https://theunitedstates.io/images/congress/225x275/' + id + '.jpg';
     return (
         <Card>
             <CardSection>
@@ -17,7 +17,7 @@ const RepDetail = ({ record }) => {
                 <View style={styles.imageContainerStyle}>
                     <Image
                         style={styles.repImageStyle}
-                        source={{uri: 'https://theunitedstates.io/images/congress/225x275/' + id + '.jpg'}}
+                        source={{uri: photo}}
                     />
                 </View>
                 
