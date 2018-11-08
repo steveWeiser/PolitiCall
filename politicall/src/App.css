@@ -129,6 +129,9 @@ you use .className with class name component used.*/
   flex: 1;
 }
 
-Menu:active {
-  transform: rotate(45deg);
+.NavMenuItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
