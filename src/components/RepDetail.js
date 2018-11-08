@@ -10,6 +10,7 @@ const RepDetail = ({ record }) => {
     // const { repName, repParty, repImage } = props;
     const id = record.id;
     const photo = 'https://theunitedstates.io/images/congress/225x275/' + id + '.jpg';
+
     return (
         <Card>
             <CardSection>
