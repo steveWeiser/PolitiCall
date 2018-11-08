@@ -1,28 +1,35 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Image, Text } from 'react-native';
+import { StyleSheet, View, Image, Text, KeyboardAvoidingView } from 'react-native';
 import LoginForm from './LoginForm';
 import { red } from 'ansi-colors';
 
 export default class Login extends Component {
     render() {
         return (
-            <View style={styles.container}>
+            // <View style={styles.container}>
+            <KeyboardAvoidingView behavior="padding" style={styles.container}>
+           
             <View style={styles.logoContainer}>
                 <Image 
                     resizeMode="contain"
                     style={styles.logo}
-                    source={require('../../Images/Politicall.png')} 
+                    source={require('../../Images/PoliticallClear.png')} 
                     />
 
-                    <Text style={styles.title}>Enter your zipcode below, This will determine your representatives</Text>
+                    
             </View>
                 <View style={styles.formContainer}>
                     <LoginForm />
                 </View>
-            </View>
+               
+            </KeyboardAvoidingView>
+             // </View> 
         );
     }
 }
+
+//this originally went below image
+// <Text style={styles.title}>Enter your Adress below, This will determine your representatives</Text>
 
 const styles = StyleSheet.create({
     container: {
@@ -52,7 +59,7 @@ const styles = StyleSheet.create({
         opacity: 0.9,
         fontWeight: 'bold',
         fontFamily: "Avenir Next",
-        fontSize: 20,
+        fontSize: 14,
     }
     
 });
