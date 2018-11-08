@@ -1,3 +1,4 @@
+// npm install --save react-navigation
 import React from 'react';
 import { Text, View } from 'react-native';
 import { createBottomTabNavigator } from 'react-navigation';
