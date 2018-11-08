@@ -1,24 +1,26 @@
 import React, { Component } from 'react';
-import { ScrollView } from 'react-native';
+import { ScrollView, Text} from 'react-native';
 import RepDetail from './RepDetail';
-import axios from 'axios';
+import axios from 'axios'; 
 
-// this is class based because it needs to make an https request 
+// attempt at making a class based component
 class RepList extends Component {
-    // set our default state of empty reps 
-    state = { reps : [], googleInfo: [] }; 
 
-    // will execute as soon as its rendered to the screen 
+    // set our default state of empty reps 
+    state = { reps: [], googleInfo: [] };
+
+    // rewriting out componentWillMount to use two api calls to gather our results 
     componentWillMount () {
 
         this.makeGoogleCall().then((returnVal) => {
             this.makePPCall()
         });
-        
-    }
 
+    } 
+    
     // propublica call 
     makePPCall() {
+
         var header = {
             'Content-Type': 'application/json',
             'X-API-Key': 'KDNMUgMhKjpCYBUiTj6nV6eO3IugCr7OIBUk6kSP'
@@ -28,15 +30,18 @@ class RepList extends Component {
         axios.get('https://api.propublica.org/congress/v1/members/senate/' + this.state.googleInfo.state + '/current.json',{headers: header}).then(response => this.setState({ reps: response.data.results }));
 
         // adds representative to our state 
-        // this.setState({ reps: [this.state.reps, [response.data]
         axios.get('https://api.propublica.org/congress/v1/members/house/' + this.state.googleInfo.state + '/' + this.state.googleInfo.cd + '/current.json', {headers: header}).then(response => this.setState({ reps: this.state.reps.concat(response.data.results) }));
-        // axios.get('https://api.propublica.org/congress/v1/members/house/' + this.state.googleInfo.state + '/' + this.state.googleInfo.cd + '/current.json', {headers: header}).then(response => console.log(response.data));
-        // console.log(this.state.reps)
     }
 
     // google call to grab our state and cd fields
     makeGoogleCall () {
         // refactor this to make the string a dynamically passed in value
+
+        // original raw address for formatting 
+        // 10033+Cove+Lake+Dr+Orlando%2C+FL+32836 
+        // var address = <the prop being passed in> 
+        // var key = AIzaSyC1CPGSTnrLx0UsFGuAN_35qdYXlPKyCEk
+        // const request = 'https://www.googleapis.com/civicinfo/v2/representatives?address=' + address + '&levels=country&roles=legislatorLowerBody&roles=legislatorUpperBody&fields=divisions&key=AIzaSyC1CPGSTnrLx0UsFGuAN_35qdYXlPKyCEk';
         const request = 'https://www.googleapis.com/civicinfo/v2/representatives?address=10033+Cove+Lake+Dr+Orlando%2C+FL+32836&levels=country&roles=legislatorLowerBody&roles=legislatorUpperBody&fields=divisions&key=AIzaSyC1CPGSTnrLx0UsFGuAN_35qdYXlPKyCEk';
 
         return axios.get(request, {transformResponse: undefined}).then( (response) => {
@@ -49,14 +54,16 @@ class RepList extends Component {
 
     renderReps() {
         // map is an array helper 
-        // pass in fat arrow function, that is called for each rep 
+        // pass in fat arrow function, that is called for each album 
         // what is returned is put into a new array 
-        // rep.title is a js variable within JSX so you need curly braces 
+        // album.title is a js variable within JSX so you need curly braces 
         return this.state.reps.map(rep => 
+            // we dont need this anymore cuz we wanna display into albumdetail
+            // <Text key={album.title}>{album.title}</Text>
             // best property to use is to use an ID 
-            // we want a prop of 'rep' to be passed into each repdetail component 
+            // we want a prop of 'album' to be passed into each albumdetail component 
             // prop name = record 
-            // variable name = rep
+            // variable name = album
             <RepDetail key={rep.id} record={rep} />
         );
     }
@@ -65,9 +72,10 @@ class RepList extends Component {
         return (
             <ScrollView>
                 {this.renderReps()}
-                {/* <Text>{JSON.stringify(this.state)}</Text> */}
             </ScrollView>
         );
     }
 }
+
+
 export default RepList;
