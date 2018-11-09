@@ -1,0 +1,123 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.HeaderContainer {
+  background-color: #FAEED1;
+  text-align: center;
+  height: 10%;
+  padding: 0px;
+}
+
+.HeaderImage {
+  align-items: center;
+  text-align: center;
+  width: 20%;
+  height: auto;
+}
+
+.FatContainer {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: inline-block;
+}
+
+.CongressSeparator {
+  background-color: #CCC;
+  justify-content: left; 
+  align-items: left; 
+  height: 45%;
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 4px;
+  font-size: 200%;
+  text-indent: 2%
+}
+
+.PoliticianCardContainer {
+  width: 30%;
+  height: 10%;
+  margin: 5px;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 3px #ccc;
+  padding: 16px;
+  display: inline-block;
+}
+.PoliticianCard {
+  width: 30%;
+  height: 10%;
+  margin: 5px;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 3px #ccc;
+  padding: 16px;
+  text-align: left;
+  align-items: left;
+  margin-top: 0;
+  margin-left: 15px;
+}
+
+.PoliticianCardImage {
+  align-items: center;
+  text-align: center;
+  width: 20%;
+  height: auto;
+  border-radius: 70%;
+}
+
+.PoliticianCardText {
+  width: 100%;
+  height: auto;
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+.SelectedRepContainer {
+  display: inline-block;
+  border: 10px solid blue;
+  width: 100px;
+  height: 100px;
+}
+
+.SelectedRepImage {
+  align-items: center;
+  text-align: center;
+  width: 20%;
+  height: auto;
+}
+
+.SelectedRepText {
+  width: 100%;
+  height: auto;
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
