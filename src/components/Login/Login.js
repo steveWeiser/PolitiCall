@@ -5,10 +5,18 @@ import { red } from 'ansi-colors';
 
 export default class Login extends Component {
     render() {
+
+        return (
+            <ImageBackground source={require('../../Images/FlagBackground.png')} style={{width: '100%', height: '100%'}}>
+            <Text>Inside</Text>
+            </ImageBackground>
+            );
+
         return (
             // <View style={styles.container}>
             <KeyboardAvoidingView behavior="padding" style={styles.container}>
            
+
             <View style={styles.logoContainer}>
                 <Image 
                     resizeMode="contain"

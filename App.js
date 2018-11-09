@@ -22,13 +22,9 @@ export default class App extends Component<Props> {
   render() {
     return (
       <Login />
-      /*<View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to Yusuf's React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>What could go wrong?</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-      */ //</View>
+
     );
+
   }
 }
 

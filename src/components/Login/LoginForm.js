@@ -6,6 +6,8 @@ export default class LoginForm extends Component {
         super(props);
         this.state = {zipInput: ''}
         this.state = {stateInput: ''}
+        this.state = {cityInput: ''}
+        this.state = {streetInput: ''}
     }
 
     render() {
@@ -15,6 +17,7 @@ export default class LoginForm extends Component {
                 placeholder="Street Address"
                 //placeholderTextColor="rgba(255,255,255,0.7)"
                 returnKeyType="next"
+                onChangeText={(streetInput) => this.setState({streetInput})}
                 onSubmitEditing={() => this.cityInput.focus()}
                 style={styles.input}
                 />
@@ -24,6 +27,7 @@ export default class LoginForm extends Component {
                 //placeholderTextColor="rgba(255,255,255,0.7)"
                 returnKeyType="next"
                 ref={(input) => this.cityInput = input}
+                onChangeText={(cityInput) => this.setState({cityInput})}
                 onSubmitEditing={() => this.stateInput.focus()}
                 style={styles.input}
                 />
@@ -52,6 +56,7 @@ export default class LoginForm extends Component {
                 <TouchableOpacity style={styles.buttonContainer}>
                     <Text style={styles.buttonText}>DONE</Text>
                 </TouchableOpacity>
+
             </View>
         );
     }
