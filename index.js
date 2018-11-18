@@ -9,7 +9,7 @@ import Navbar from './src/components/Navbar';
 const App = () => {
     return (
         <View style={{flex: 1}}>
-            <Header headerText={'PolitiCall'}/>
+            <Header headerText1={'Politi'} headerText2={'Call'}/>
             {/* <RepList/> */}
             <Navbar/>
         </View>
