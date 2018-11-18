@@ -4,7 +4,7 @@ import { Text, View } from 'react-native';
 const Header = (props) => {
     return (
         <View style={styles.headerStyle}>
-            <Text style={styles.headerTextStyle}>{props.headerText}</Text>
+            <Text style={styles.headerTextStyle1}>{props.headerText1}<Text style={styles.headerTextStyle2}>{props.headerText2}</Text></Text>
         </View>
         
     );
@@ -25,9 +25,15 @@ const styles = {
         elevation: 2, 
         position: 'relative'
     },
-    headerTextStyle: 
+    headerTextStyle1: 
     {
-        fontSize: 20
+        fontSize: 20,
+        color: '#0015BC'
+    },
+    headerTextStyle2:
+    {
+        fontSize: 20,
+        color: '#FF0000'
     }
 };
 

@@ -12,6 +12,20 @@ const RepDetail = ({ record }) => {
     // const { repName, repParty, repImage } = props;
     const id = record.id;
     const photo = 'https://theunitedstates.io/images/congress/225x275/' + id + '.jpg';
+    
+    function partyString(props){
+        if (props.party == 'D'){ 
+            return "Democrat";
+        }
+        else if (props.party == 'R'){
+            return "Republican";
+        }
+        else{
+            return props.party;
+        }
+    }
+
+    const party = partyString(record);
 
     return (
         <Card>
@@ -28,7 +42,7 @@ const RepDetail = ({ record }) => {
                 {/* Name of Rep & party */}
                 <View style={styles.repInfoStyle}>
                     <Text style={styles.repNameStyle}>{record.name}</Text>
-                    <Text>{record.party}</Text>
+                    <Text>{party}</Text>
                 </View>
             </CardSection>
 
