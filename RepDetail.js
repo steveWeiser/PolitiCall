@@ -15,10 +15,10 @@ const RepDetail = ({ record }) => {
     
     function partyString(props){
         if (props.party == 'D'){ 
-            return "Democrat";
+            return 'Democrat';
         }
         else if (props.party == 'R'){
-            return "Republican";
+            return 'Republican';
         }
         else{
             return props.party;
@@ -42,13 +42,13 @@ const RepDetail = ({ record }) => {
                 {/* Name of Rep & party */}
                 <View style={styles.repInfoStyle}>
                     <Text style={styles.repNameStyle}>{record.name}</Text>
-                    <Text>{party}</Text>
+                    <Text style={styles.partyStyle}>{party}</Text>
                 </View>
             </CardSection>
 
             {/* Pass onPress function to parent "Button" to be executed on press! */}
             <CardSection>
-                <Button onPress={() => call({number: '9417260538', prompt: true}).catch(console.error)}>
+                <Button onPress={() => call({number: '1234567890', prompt: true}).catch(console.error)}>
                     <Text>
                         Call!
                     </Text>
@@ -61,24 +61,31 @@ const RepDetail = ({ record }) => {
 const styles ={
     repImageStyle:
     {
-        height: 50, 
-        width: 50,
+        height: 69, 
+        width: 69,
     },
     imageContainerStyle:
     {
         justifyContent: 'center', 
         alignItems: 'center', 
         marginLeft: 10, 
-        marginRight: 10
+        marginRight: 10,
     },
     repInfoStyle:
     {
         flexDirection: 'column', 
-        justifyContent: 'space-around'
+        justifyContent: 'space-around',
     },
     repNameStyle:
     {
-        fontSize: 18
+        fontSize: 25,
+        fontWeight: 'bold',
+    },
+    partyStyle:
+    {
+        fontSize: 18,
+        fontStyle: 'italic',
+        fontWeight: 'bold',
     }
 };
 export default RepDetail;

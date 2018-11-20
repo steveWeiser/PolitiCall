@@ -16,7 +16,7 @@ class HomeScreen extends React.Component {
 class BillScreen extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <View style={styles.navBarView}>
         <Text>Bills</Text>
       </View>
     );
@@ -26,13 +26,21 @@ class BillScreen extends React.Component {
 class LocationScreen extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <View style={styles.navBarView}>
         <Text>Location</Text>
       </View>
     );
   }
 }
 
+const styles = {
+  navBarView:
+  {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+};
 
 export default createBottomTabNavigator(
   {

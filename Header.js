@@ -13,27 +13,31 @@ const Header = (props) => {
 const styles = {
     headerStyle:
     {
-        backgroundColor: '#F8F8F8',
         justifyContent: 'center', 
         alignItems: 'center', 
-        height: 60, // pixel value 
-        paddingTop: 15, // padding to top of element
-        shadowColor: '#000', 
+        height: 55, // pixel value
+        //shadowColor: '#000', 
         shadowOffset: { width: 0, height: 2 }, // dimensions of shadow 
         //              nothing on left or right, but we want it on the bottom
-        shadowOpacity: 0.1,  // how heavy is it, usually between 0 and 1
+        shadowOpacity: 0,  // how heavy is it, usually between 0 and 1
         elevation: 2, 
-        position: 'relative'
+        position: 'relative',
     },
     headerTextStyle1: 
     {
-        fontSize: 20,
-        color: '#0015BC'
+        fontSize: 25,
+        color: '#0015BC',
+        letterSpacing: 2.5,
+        textDecorationLine: 'underline',
+        fontWeight: 'bold',
     },
     headerTextStyle2:
     {
-        fontSize: 20,
-        color: '#FF0000'
+        fontSize: 25,
+        color: '#FF0000',
+        letterSpacing: 2.5,
+        textDecorationLine: 'underline',
+        fontWeight: 'bold',
     }
 };
 
